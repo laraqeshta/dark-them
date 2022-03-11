@@ -1,0 +1,156 @@
+body{
+    font-family: 'lato', sans-serif;
+}
+
+:root{
+    --background: #ffffff;
+    --text-primary: #000;
+    --text-secondary: #055dc2;
+    --accent: #055dc2;
+    --border: rgb(155, 155, 155);
+    --form-bg: #fff;
+    --textbox-bg: #f1f1f1;
+}
+
+[data-theme='dark'] {
+    --background: #000;
+    --text-primary: #fff;
+    --text-secondary: #055dc2;
+    --accent: #055dc2;
+    --border: rgb(53, 53, 53);
+    --form-bg: #191919;
+    --textbox-bg: #242424;
+}
+
+::placeholder{
+    font-family: 'lato', sans-serif;
+    font-size: 0.7rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: var(--text-secondary);
+}
+
+.app{
+    background-color: var(--background);
+    color: var(--text-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: all 0.5s;
+}
+
+.login h1{
+    text-align: center;
+    margin: 0 0 2rem;
+    padding-top: 2rem;
+    font-size: 2.2rem;
+}
+.theme-toggle i {
+    font-size: 2rem;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 300px;
+    margin: auto;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    background-color: var(--form-bg);
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.top i {
+    font-size: 1rem;
+}
+
+.divider{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--text-primary);
+    line-height: 0.1rem;
+    margin: 2rem 0;
+}
+
+.divider span{
+    padding: 0 10px;
+    background-color: var(--form-bg);
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin: 8px 0;
+    font-weight: 700;
+    padding-left: 15px;
+
+}
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 99em;
+    border: 1px solid var(--textbox-bg);
+    background: var(--textbox-bg);
+    color: var(--text-primary);
+    outline: 0;
+}
+
+.remember{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+}
+
+input[type=checkbox]:checked{
+    margin: 0;
+    padding: 0;
+}
+
+.remember p{
+    padding-left: 10px;
+}
+
+.btn{
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    color: #fff;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 99em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8rem;
+}
